@@ -5,9 +5,13 @@ frameworkVersion: '>=1.2.0 <2.0.0'
 provider:
   name: aws
 
-resources:
-  Resources:
-
+functions:
+  terp-email:
+    handler: terp/index.email
+    events:
+      - http:
+          path: api/terp/email
+          method: get
 
 package:
   exclude:

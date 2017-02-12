@@ -22,4 +22,17 @@ open-s3:
 	@open http://$(BF_BUCKET_NAME)-prod.s3.amazonaws.com
 
 open:
-	@open https://www.benfletcher.com
+	@open https://www.benfletcher.com/index.html
+
+# if you want a faster develop-deploy cycle then use this instead
+provision-function-only:
+	@serverless deploy function --region eu-west-1 --stage dev --function terp-email
+
+logs:
+	@serverless logs --region eu-west-1 --stage dev --function terp-email --tail
+
+invoke:
+	@serverless invoke --region eu-west-1 --stage dev --function terp-email --data '{}'
+
+invoke-local:
+	@serverless invoke local --region eu-west-1 --stage dev --function terp-email --data '{}'
