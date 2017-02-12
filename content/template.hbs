@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>{{title}}</title>
+		<meta name="description" content="{{description}}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="canonical" href="https://www.benfletcher.com/{{id}}" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fff1e0">
+		<meta name="theme-color" content="#fff1e0">
+
+		<meta property="og:title" content="{{title}}" />
+		<meta property="og:type" content="{{type}}" />
+		<meta property="og:site_name" content="Ben Fletcher" />
+		<meta property="og:description" content="{{description}}" />
+		<meta property="og:url" content="https://www.benfletcher.com/{id}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bjfletcher">
+		<meta name="twitter:title" content="{{title}}">
+		<meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:creator" content="@bjfletcher">
+    <meta name="twitter:image:src" content="https://www.benfletcher.com/img/mugshot.png">
+    <meta name="twitter:image:alt" content="Ben Fletcher" />
+    <meta name="twitter:domain" content="www.benfletcher.com">
+
+<script type="application/ld+json">
+{{{schema}}}
+</script>
+		<style>
+
+body {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background-color: #fff1e0;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.bf__header {
+	color: #fff;
+	background-color: #222;
+	color: #fff;
+	padding: 30px 15px;
+}
+
+.header__first {
+	margin: 0;
+	text-align: center;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+}
+
+.header__second {
+	margin: 15px 0 0;
+	text-align: center;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	color: #ccc;
+}
+
+.header__third {
+	margin: 15px 0 0;
+	text-align: center;
+	font-weight: normal;
+	font-style: italic;
+	color: #ccc;
+}
+
+.header__headshot {
+	position: absolute;
+	top: 30px;
+	border: 5px solid white;
+}
+
+.header__headshot img {
+	width: 200px;
+}
+
+.bf__section,
+.bf__aside {
+	width: 700px;
+	margin: auto;
+}
+
+.article__header {
+	position: relative;
+	padding: 20px 0;
+}
+
+.article__header:before,
+.article__header:after {
+	border-top: 8px solid rgba(0,0,0,.05);
+	content: '';
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+}
+
+@media (min-width: 61.25em) {
+	.article__header:after {
+		width: 32.5%;
+	}
+}
+
+.article__header:after {
+	border-top-color: #000;
+}
+
+.article__heading {
+	margin: 0;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+}
+
+		</style>
+</head>
+<body>
+		<header class="bf__header">
+			<h1 class="header__first">Ben Fletcher</h1>
+			<h2 class="header__second">Web technology analysis &amp; opinion</h2>
+			<h3 class="header__third">With thanks to <a href="colleagues">colleagues</a> at the <a href="https://www.ft.com">FT</a> and countless others in the community</h3>
+			<figure class="header__headshot">
+					<img src="img/headshot.jpg" alt="Bearded Ben with shades" />
+					<figcaption>Foobar</figcaption>
+			</figure>
+		</header>
+		<section class="bf__section">
+				{{content}}
+		</section>
+    <aside class="bf__aside">
+        <section>
+            <h1>Links</h1>
+            <ul>
+								<li><a href="http://stackoverflow.com/story/bjfletcher">CV</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+            </ul>
+        </section>
+    </aside>
+    <footer>Footer</footer>
+</body>
+</html>
