@@ -7,23 +7,12 @@
 		<meta name="description" content="Web technology analysis & opinion. With thanks to colleagues at the FT and countless others in the community." />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="canonical" href="https://www.benfletcher.com" />
-		<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png" />
-		<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
-		<link rel="manifest" href="/manifest.json" />
-		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png" />
-		<meta name="theme-color" content="#ffffff" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fff1e0">
+		<meta name="theme-color" content="#fff1e0">
 
 		<meta property="og:title" content="Ben Fletcher" />
 		<meta property="og:type" content="website" />
@@ -83,6 +72,16 @@ a {
 	color: #ccc;
 }
 
+.header__headshot {
+	position: absolute;
+	top: 30px;
+	border: 5px solid white;
+}
+
+.header__headshot img {
+	width: 200px;
+}
+
 .bf__section,
 .bf__aside {
 	width: 700px;
@@ -123,16 +122,19 @@ a {
 </head>
 <body>
 		<header class="bf__header">
-			<hgroup>
-				<h1 class="header__first">Ben Fletcher</h1>
-				<h2 class="header__second">Web technology analysis &amp; opinion</h2>
-				<h3 class="header__third">With thanks to <a href="colleagues">colleagues</a> at the <a href="https://www.ft.com">FT</a> and countless others in the community</h3>
-			</hgroup>
+			<h1 class="header__first">Ben Fletcher</h1>
+			<h2 class="header__second">Web technology analysis &amp; opinion</h2>
+			<h3 class="header__third">With thanks to <a href="colleagues">colleagues</a> at the <a href="https://www.ft.com">FT</a> and countless others in the community</h3>
+			<figure class="header__headshot">
+					<img src="img/headshot.jpg" alt="Bearded Ben with shades" />
+					<figcaption>Foobar</figcaption>
+			</figure>
 		</header>
 		<section class="bf__section">
 				<article>
 						<header class="article__header">
 								<h1 class="article__heading">Article</h1>
+								<img src="headshot.jpg" />
 						</header>
 						<section>
 								This is the first article.
@@ -156,12 +158,6 @@ a {
                 <li><a href="#">Link 2</a></li>
             </ul>
         </section>
-        <figure>
-            <img width="85" height="85" 
-                src="/img/mugshot.png" 
-                alt="A shot of Ben Fletcher's face" />
-            <figcaption>Foobar</figcaption>
-        </figure>
     </aside>
     <footer>Footer</footer>
 </body>
