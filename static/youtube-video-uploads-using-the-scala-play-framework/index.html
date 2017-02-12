@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>YouTube video uploads using the Scala Play Framework - Ben Fletcher</title>
+		<meta name="description" content="I didn&#x27;t see anything on Stack Overflow or the Internet that worked and I hope this would help if anyone was looking for something.…" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="canonical" href="https://www.benfletcher.com/11" />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<meta property="og:title" content="YouTube video uploads using the Scala Play Framework - Ben Fletcher" />
+		<meta property="og:type" content="article" />
+		<meta property="og:site_name" content="Ben Fletcher" />
+		<meta property="og:description" content="I didn&#x27;t see anything on Stack Overflow or the Internet that worked and I hope this would help if anyone was looking for something.…" />
+		<meta property="og:url" content="https://www.benfletcher.com/{id}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bjfletcher">
+		<meta name="twitter:title" content="YouTube video uploads using the Scala Play Framework - Ben Fletcher">
+		<meta name="twitter:description" content="I didn&#x27;t see anything on Stack Overflow or the Internet that worked and I hope this would help if anyone was looking for something.…">
+    <meta name="twitter:creator" content="@bjfletcher">
+    <meta name="twitter:image:src" content="https://www.benfletcher.com/img/mugshot.png">
+    <meta name="twitter:image:alt" content="Ben Fletcher" />
+    <meta name="twitter:domain" content="www.benfletcher.com">
+
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"Article","url":"http://www.bbc.co.uk/news/uk-politics-38641208","publisher":{"@type":"Person","name":"Ben Fletcher","logo":"https://www.benfletcher.com/img/mugshot.png"},"headline":"YouTube video uploads using the Scala Play Framework","mainEntityOfPage":"https://www.benfletcher.com/11","articleBody":"I didn't see anything on Stack Overflow or the Internet that worked and I hope this would help if anyone was looking for something.…","datePublished":"2015-02-09T08:00:00.000"}
+</script>
+		<style>
+
+body {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background-color: #fff1e0;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.bf__header {
+	color: #fff;
+	background-color: #222;
+	color: #fff;
+	padding: 30px 15px;
+}
+
+.header__first {
+	margin: 0;
+	text-align: center;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+}
+
+.header__second {
+	margin: 15px 0 0;
+	text-align: center;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	color: #ccc;
+}
+
+.header__third {
+	margin: 15px 0 0;
+	text-align: center;
+	font-weight: normal;
+	font-style: italic;
+	color: #ccc;
+}
+
+.bf__section,
+.bf__aside {
+	width: 700px;
+	margin: auto;
+}
+
+.article__header {
+	position: relative;
+	padding: 20px 0;
+}
+
+.article__header:before,
+.article__header:after {
+	border-top: 8px solid rgba(0,0,0,.05);
+	content: '';
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+}
+
+@media (min-width: 61.25em) {
+	.article__header:after {
+		width: 32.5%;
+	}
+}
+
+.article__header:after {
+	border-top-color: #000;
+}
+
+.article__heading {
+	margin: 0;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+}
+
+		</style>
+</head>
+<body>
+		<header class="bf__header">
+			<hgroup>
+				<h1 class="header__first">Ben Fletcher</h1>
+				<h2 class="header__second">Web technology analysis &amp; opinion</h2>
+				<h3 class="header__third">With thanks to <a href="colleagues">colleagues</a> at the <a href="https://www.ft.com">FT</a> and countless others in the community</h3>
+			</hgroup>
+		</header>
+		<section class="bf__section">
+				<article>
+						<header class="article__header">
+							<h1 class="article__heading">YouTube video uploads using the Scala Play Framework</h1>
+							<time>9 February 2015</time>
+						</header>
+						<section>
+							<p>I didn't see anything on Stack Overflow or the Internet that worked and I hope this would help if anyone was looking for something.</p>
+<p>I used the &quot;offline&quot; pattern because I wanted to allow users to upload to a single YouTube account that I had setup for the website.</p>
+<p>Three to this process:</p>
+<ol>
+<li>site would need to authenticate with Googlbe, obtain the OAuth2 access and especially refresh tokens, and store these in database;</li>
+<li>whenever user wants to upload a video, site would need to:
+a) check if the access token from 1 has expired, if it has, obtain a new one using the refresh token (won't need any re-authentication);
+b) with the access token, upload the video to YouTube</li>
+</ol>
+<p>To do 1, an admin page signs in to YouTube to obtain an authentication code:</p>
+<pre><code>  def signInUrl: String = {
+    val state = UUID.randomUUID()
+    val parameters = Map(
+        &quot;client_id&quot; -&gt; clientId,
+        &quot;redirect_uri&quot; -&gt; redirectUri,
+        &quot;scope&quot; -&gt; &quot;https://www.googleapis.com/auth/youtube.upload&quot;,
+        &quot;response_type&quot; -&gt; &quot;code&quot;,
+        &quot;state&quot; -&gt; state,
+        &quot;access_type&quot; -&gt; &quot;offline&quot;)
+    val queryString = parameters.map(p =&gt; s&quot;${p._1}=${p._2}&quot;).mkString(&quot;&amp;&quot;)
+    s&quot;$authUrl?$queryString&quot;
+  }
+</code></pre>
+<p>Then obtain the OAuth2 access and refresh tokens using the code from above:</p>
+<pre><code>  def newTokens(code: String): Future[Tokens] = {
+    for {
+      accessResponse &lt;- WS.url(tokenUrl)
+        .post(Map(&quot;client_id&quot; -&gt; Seq(clientId),
+            &quot;client_secret&quot; -&gt; Seq(clientSecret),
+            &quot;grant_type&quot; -&gt; Seq(&quot;authorization_code&quot;),
+            &quot;code&quot; -&gt; Seq(code),
+            &quot;redirect_uri&quot; -&gt; Seq(redirectUri)))
+    } yield {
+      // TODO: the below is for the offline pattern...
+      // for online, we'd add it to user's request object
+      println(s&quot;New tokens JSON: ${accessResponse.json}&quot;)
+      val tokens = accessResponse.json.as[Tokens]
+      println(s&quot;New tokens: $tokens&quot;)
+      // TODO: use database instead of a variable here?
+      this.tokens = Some(tokens)
+      tokens
+    }
+  }
+</code></pre>
+<p>Store the access, expires and refresh tokens to database.</p>
+<p>To do 2(a), the upload page checks if the access token has expired and refresh it if necessary:</p>
+<pre><code>  def refreshToken(tokens: Tokens): Future[Tokens] = {
+    if (tokens.expires.getTime &gt; System.currentTimeMillis()) {
+      Future.successful(tokens)
+    } else {
+      for {
+        r &lt;- WS.url(tokenUrl)
+          .post(Map(&quot;client_id&quot; -&gt; Seq(clientId),
+          &quot;client_secret&quot; -&gt; Seq(clientSecret),
+          &quot;grant_type&quot; -&gt; Seq(&quot;refresh_token&quot;),
+          &quot;refresh_token&quot; -&gt; Seq(tokens.refreshToken.get)))
+      } yield {
+        r.json.as[Tokens]
+      }
+    }
+  }
+</code></pre>
+<p>To do 2(b), upload video with the access token, using YouTube's two-part process of firstly obtaining the URL to upload to and then uploading to the URL:</p>
+<pre><code>  def upload(video: File, details: VideoDetails): Future[JsValue] = {
+    for {
+      // NOTE: using stored tokens for the offline pattern...
+      // for online pattern, we'd get it from user's request object
+      tokens &lt;- refreshToken(this.tokens.get)
+      upload &lt;- WS.url(uploadUrl)
+        .withHeaders(&quot;Authorization&quot; -&gt; s&quot;Bearer ${tokens.accessToken}&quot;)
+        .withQueryString(&quot;uploadType&quot; -&gt; &quot;resumable&quot;, &quot;part&quot; -&gt; &quot;status, snippet&quot;)
+        .post(Json.obj(
+            &quot;snippet&quot; -&gt; Json.obj(
+              &quot;title&quot; -&gt; details.title,
+              &quot;description&quot; -&gt; details.description
+            ),
+            &quot;status&quot; -&gt; Json.obj(
+              &quot;privacyStatus&quot; -&gt; &quot;private&quot;
+            )))
+      location = upload.header(&quot;location&quot;).get
+      meta &lt;- WS.url(location)
+        .withHeaders(&quot;Authorization&quot; -&gt; s&quot;Bearer ${tokens.accessToken}&quot;)
+        .post(video)
+    } yield {
+      this.tokens = Some(tokens)
+      meta.json
+    }
+  }
+</code></pre>
+<p>Hope this helps.</p>
+
+						</section>
+				</article>
+		</section>
+    <aside class="bf__aside">
+        <section>
+            <h1>Links</h1>
+            <ul>
+								<li><a href="http://stackoverflow.com/story/bjfletcher">CV</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+            </ul>
+        </section>
+        <figure>
+            <img width="85" height="85" 
+                src="/img/mugshot.png" 
+                alt="A shot of Ben Fletcher's face" />
+            <figcaption>Foobar</figcaption>
+        </figure>
+    </aside>
+    <footer>Footer</footer>
+</body>
+</html>

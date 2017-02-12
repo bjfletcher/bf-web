@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>React, CDN (GitHub Pages), SEO and Performance - Ben Fletcher</title>
+		<meta name="description" content="I wanted to put a website (this one :) on GitHub Pages which is an excellent (and it is even free!) CDN however there were a couple of issues:
+
+- GitHub Pages didn&#x27;t have support for wildcarded URL matching;
+- to achieve SEO, pages would need to be server-rendered and GitHub Pages doesn&#x27;t allow any server rendering.
+
+The way I solved this…" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="canonical" href="https://www.benfletcher.com/10" />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<meta property="og:title" content="React, CDN (GitHub Pages), SEO and Performance - Ben Fletcher" />
+		<meta property="og:type" content="article" />
+		<meta property="og:site_name" content="Ben Fletcher" />
+		<meta property="og:description" content="I wanted to put a website (this one :) on GitHub Pages which is an excellent (and it is even free!) CDN however there were a couple of issues:
+
+- GitHub Pages didn&#x27;t have support for wildcarded URL matching;
+- to achieve SEO, pages would need to be server-rendered and GitHub Pages doesn&#x27;t allow any server rendering.
+
+The way I solved this…" />
+		<meta property="og:url" content="https://www.benfletcher.com/{id}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bjfletcher">
+		<meta name="twitter:title" content="React, CDN (GitHub Pages), SEO and Performance - Ben Fletcher">
+		<meta name="twitter:description" content="I wanted to put a website (this one :) on GitHub Pages which is an excellent (and it is even free!) CDN however there were a couple of issues:
+
+- GitHub Pages didn&#x27;t have support for wildcarded URL matching;
+- to achieve SEO, pages would need to be server-rendered and GitHub Pages doesn&#x27;t allow any server rendering.
+
+The way I solved this…">
+    <meta name="twitter:creator" content="@bjfletcher">
+    <meta name="twitter:image:src" content="https://www.benfletcher.com/img/mugshot.png">
+    <meta name="twitter:image:alt" content="Ben Fletcher" />
+    <meta name="twitter:domain" content="www.benfletcher.com">
+
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"Article","url":"http://www.bbc.co.uk/news/uk-politics-38641208","publisher":{"@type":"Person","name":"Ben Fletcher","logo":"https://www.benfletcher.com/img/mugshot.png"},"headline":"React, CDN (GitHub Pages), SEO and Performance","mainEntityOfPage":"https://www.benfletcher.com/10","articleBody":"I wanted to put a website (this one :) on GitHub Pages which is an excellent (and it is even free!) CDN however there were a couple of issues:\n\n- GitHub Pages didn't have support for wildcarded URL matching;\n- to achieve SEO, pages would need to be server-rendered and GitHub Pages doesn't allow any server rendering.\n\nThe way I solved this…","datePublished":"2015-01-03T08:00:00.000"}
+</script>
+		<style>
+
+body {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background-color: #fff1e0;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.bf__header {
+	color: #fff;
+	background-color: #222;
+	color: #fff;
+	padding: 30px 15px;
+}
+
+.header__first {
+	margin: 0;
+	text-align: center;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+}
+
+.header__second {
+	margin: 15px 0 0;
+	text-align: center;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	color: #ccc;
+}
+
+.header__third {
+	margin: 15px 0 0;
+	text-align: center;
+	font-weight: normal;
+	font-style: italic;
+	color: #ccc;
+}
+
+.bf__section,
+.bf__aside {
+	width: 700px;
+	margin: auto;
+}
+
+.article__header {
+	position: relative;
+	padding: 20px 0;
+}
+
+.article__header:before,
+.article__header:after {
+	border-top: 8px solid rgba(0,0,0,.05);
+	content: '';
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+}
+
+@media (min-width: 61.25em) {
+	.article__header:after {
+		width: 32.5%;
+	}
+}
+
+.article__header:after {
+	border-top-color: #000;
+}
+
+.article__heading {
+	margin: 0;
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+}
+
+		</style>
+</head>
+<body>
+		<header class="bf__header">
+			<hgroup>
+				<h1 class="header__first">Ben Fletcher</h1>
+				<h2 class="header__second">Web technology analysis &amp; opinion</h2>
+				<h3 class="header__third">With thanks to <a href="colleagues">colleagues</a> at the <a href="https://www.ft.com">FT</a> and countless others in the community</h3>
+			</hgroup>
+		</header>
+		<section class="bf__section">
+				<article>
+						<header class="article__header">
+							<h1 class="article__heading">React, CDN (GitHub Pages), SEO and Performance</h1>
+							<time>3 January 2015</time>
+						</header>
+						<section>
+							<p>I wanted to put a website (this one :) on GitHub Pages which is an excellent (and it is even free!) CDN however there were a couple of issues:</p>
+<ul>
+<li>GitHub Pages didn't have support for wildcarded URL matching;</li>
+<li>to achieve SEO, pages would need to be server-rendered and GitHub Pages doesn't allow any server rendering.</li>
+</ul>
+<p>The way I solved this was to have a deployment script that goes through all routes in the <code>Route.jsx</code> and render all possible routes creating all possible pages statically.  Then upload this distribution folder to the <code>gh-pages</code> branch for Github Pages.  This is just to meet the SEO requirement.  When a link is navigated to, it'll do it all dynamically client-side using React.  Just perfect. :)</p>
+<pre><code class="language-js">gulp.task('htmls', function() {
+  require('node-jsx').install({ harmony: true });
+  var renderer = require('./server-side-renderer.jsx');
+  renderer();
+});
+</code></pre>
+<p>and the renderer module being:</p>
+<pre><code class="language-js">var fs = require('fs');
+var mkdirp = require('mkdirp');
+var Minimize = require('minimize');
+
+var React = require('react/addons');
+var Router = require('react-router');
+var Routes = require('./react/Routes.jsx');
+var paths = require('./paths'); // e.g.: ['/', '/articles/', '/404.html', '/article/All-about-Browserify/', '/article/All-about-Reactify/']
+
+module.exports = function() {
+  var template = fs.readFileSync('./html/index-prod.html', { encoding: 'utf8' });
+  var minimize = new Minimize();
+  paths.map(function(path) {
+    var component = null;
+    Router.run(Routes, path, (Handler, state) =&gt; {
+        component = React.renderToString(&lt;Handler /&gt;);
+    });
+    path = './prod' + path;
+    if (!path.match(/(\.html|\/)$/)) path += '/';
+    if (path.match(/\/$/) &amp;&amp; !fs.existsSync(path))
+      mkdirp.sync(path);
+    if (!path.match(/\.html$/)) path += 'index.html';
+    var page = template.replace('&lt;div data-component-placeholder&gt;&lt;/div&gt;', component);
+    minimize.parse(page, function(err, data) {
+      if (!err) {
+        fs.writeFileSync(path, data);
+      }
+    });
+  });
+};
+</code></pre>
+
+						</section>
+				</article>
+		</section>
+    <aside class="bf__aside">
+        <section>
+            <h1>Links</h1>
+            <ul>
+								<li><a href="http://stackoverflow.com/story/bjfletcher">CV</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+            </ul>
+        </section>
+        <figure>
+            <img width="85" height="85" 
+                src="/img/mugshot.png" 
+                alt="A shot of Ben Fletcher's face" />
+            <figcaption>Foobar</figcaption>
+        </figure>
+    </aside>
+    <footer>Footer</footer>
+</body>
+</html>
